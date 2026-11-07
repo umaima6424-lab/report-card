@@ -1,0 +1,119 @@
+body{
+    min-height: 120vh;
+    background: linear-gradient(135deg,#a66b4f,#d9ad83,#f5e6d0);
+}
+.container{
+    margin-top:10px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    width:50%;
+    position:absolute;
+    top:5px;
+    left:260px;
+    background: #fffcf4;
+    border-radius: 5px;
+}
+h2{
+    color:#fffcf4;
+    margin-top: 2rem;
+    font-size: 38px;
+    font-weight: 800;
+}
+h3{
+    color:#fff1a6;
+    margin-top: -1rem;
+    font-size: 17px;
+}
+.bg{
+    background-color: #6b352a;
+    width:100%;
+    text-align: center;
+
+    clip-path: polygon(
+        25px 0,
+        100% 0,
+        100% calc(100% - 25px),
+        calc(100% - 25px) 100%,
+        0 100%,
+        0 25px
+    );
+    padding:-1px;
+}
+label{
+    color:#331b15;
+    font-weight: 550;
+    font-size: 18px;
+    margin-left: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    width:80%;
+    margin-left: 2rem;
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid rgb(102, 48, 48);
+}
+input::placeholder{
+    color:#a66b4f;
+    opacity:1;
+}
+input:hover{
+    border: 2px solid #4e2f27;
+    background: #331b15;
+    color:#f5e6d0;
+}
+button{
+    background-color:#411c14;
+    margin-left: 8rem;
+    width:50%;
+    border-radius: 18px;
+    color:#fffcf4;
+    padding:6px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+}
+#result{
+    border:1px solid #411c14;
+    border-radius:10px;
+    background:#fff1a6;
+    padding:30px;
+    width:80%;
+    margin-left: 1rem;
+    margin-top: -1rem;
+}
+#resultname{
+    color:#331b15;
+    text-align: center;
+}
+#total{
+  color:#331b15;
+    text-align: center;
+}
+#percentage{
+   color:#331b15;
+    text-align: center;
+}
+#status{
+   text-align: center;
+}
+@media (max-width:768px) {
+   .container{
+      width:fit-content;
+      padding:6px;
+      margin-left: -14rem;
+   }
+   #result{
+     width:60%;
+   }
+   button{
+    margin-left: 2.5rem;
+    width:70%;
+   }
+   #resultname{
+      font-size: larger;
+   }
+
+}

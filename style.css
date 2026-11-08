@@ -1,0 +1,263 @@
+
+/* ===== Global Styling ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a66b4f, #d9ad83, #f5e6d0);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fffcf4;
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(51, 27, 21, 0.25);
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: #fffcf4;
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+h3 {
+    color: #fff1a6;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* ===== Header Background ===== */
+.bg {
+    background-color: #6b352a;
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px;
+    clip-path: polygon(
+        25px 0,
+        100% 0,
+        100% calc(100% - 25px),
+        calc(100% - 25px) 100%,
+        0 100%,
+        0 25px
+    );
+}
+
+/* ===== Labels ===== */
+label {
+    color: #331b15;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 5px 25px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Input Fields ===== */
+input {
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    border-radius: 7px;
+    padding: 12px;
+    border: 1px solid #a66b4f;
+    background: #fffdf8;
+    color: #331b15;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: #a66b4f;
+    opacity: 1;
+}
+
+input:focus {
+    border: 2px solid #6b352a;
+    background: #fff1d9;
+    box-shadow: 0 0 8px rgba(107, 53, 42, 0.2);
+}
+
+/* ===== Button ===== */
+button {
+    background-color: #411c14;
+    width: calc(100% - 100px);
+    margin: 10px 50px;
+    border-radius: 25px;
+    color: #fffcf4;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    color: #331b15;
+    background-color: #d9ad83;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(65, 28, 20, 0.2);
+}
+
+/* ===== Result Box ===== */
+#result {
+    border: 1px solid #411c14;
+    border-radius: 12px;
+    background: #fff1a6;
+    padding: 25px 15px;
+    width: calc(100% - 50px);
+    margin: 5px 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(51, 27, 21, 0.1);
+}
+
+/* ===== Result Text ===== */
+#resultname,
+#total,
+#percentage,
+#status {
+    color: #331b15;
+    text-align: center;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+#resultname {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#total,
+#percentage {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#status {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    .container {
+        max-width: 480px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #result {
+        padding: 20px 12px;
+    }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 12px;
+    }
+
+    .container {
+        width: 100%;
+        gap: 12px;
+        border-radius: 12px;
+    }
+
+    .bg {
+        padding: 18px 8px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 12px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-left: 18px;
+    }
+
+    input {
+        width: calc(100% - 36px);
+        margin: 0 18px;
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    button {
+        width: calc(100% - 50px);
+        margin: 8px 25px;
+        font-size: 16px;
+        padding: 11px;
+    }
+
+    #result {
+        width: calc(100% - 36px);
+        margin: 5px 18px 18px;
+        padding: 18px 10px;
+    }
+
+    #resultname {
+        font-size: 19px;
+    }
+
+    #total,
+    #percentage {
+        font-size: 16px;
+    }
+
+    #status {
+        font-size: 18px;
+    }
+}
+
+/* ===== Extra Small Screens ===== */
+@media (max-width: 320px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+    input {
+        font-size: 13px;
+    }
+
+    #result {
+        padding: 14px 8px;
+    }
+}
